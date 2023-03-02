@@ -1,0 +1,244 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+:root{
+  --Red: hsl(1, 90%, 64%);
+  --Blue: hsl(219, 85%, 26%);
+  --White: hsl(0, 0%, 100%);
+  --Very-light-grayish-blue: hsl(210, 60%, 98%);
+  --Light-grayish-blue-1: hsl(211, 68%, 94%);
+  --Light-grayish-blue-2: hsl(205, 33%, 90%);
+  --Grayish-blue: hsl(219, 14%, 63%);
+  --Dark-grayish-blue: hsl(219, 12%, 42%);
+  --Very-dark-blue: hsl(224, 21%, 14%);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: var(--Very-dark-blue);
+  }
+  
+  html{
+    font-size: 16px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+  
+  span{
+    margin: 3px;
+    position: relative;
+  }
+  
+  p{
+    position: relative;
+  }
+  
+  img{
+    max-width: 100%;
+  }
+  
+  .notification-panel{
+    width: 100%;
+    margin: 10px auto;
+  }
+
+.notification_heading{
+    display:flex;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 95%;
+    margin: 20px auto;
+    font-size: .6rem;
+}
+.notification-heading > div:first-of-type{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    width: 30%;
+  }
+  #NEW-NOTIFICATIONS{
+    background-color: blue;
+    font-size: 14px;
+    color:white;
+    border-radius: 6px;
+    padding: 0.4em;
+    text-align: center;
+   width: 100%;;
+  }
+  #notification_topheader{
+    display: flex;
+    flex-direction: row;
+  }
+  #header1{
+    margin-right: 20px;
+  }
+  .profile-name{
+    font-weight: 800;
+    color: black;
+  }
+  
+  .date{
+    font-weight: 300, 500;
+    color: rgb(178, 178, 178);
+    margin: 5px;
+  }
+  
+  .group{
+    font-weight: 800;
+    color: var(--Blue);
+  }
+
+  .notification-block{
+    display: flex;
+    margin-bottom: 30px;
+    width:95%;
+    border-radius: 10px;
+  }
+   .event{
+    font-weight: 500;
+    color: var(--Grayish-blue);
+  }
+  .post{
+    color: var(--Very-dark-blue);
+  }
+ 
+  .read-notification{
+    background-color: var(--White);
+  }
+  
+  .unread-notification{
+    background-color: var(--Very-light-grayish-blue);
+  }
+  .action-block{
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .img-block{
+    width: 15%;
+    text-align: center;
+  }
+  .profile-picture{
+    max-width: 50px;
+  }
+   
+  .notification-image-reaction-block{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .notification-msg-block{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  
+  .msg{
+    border: 2px solid gray;
+    color: var(--Grayish-blue);
+    padding:.7em;
+    margin-top: 10px;
+  }
+  
+  .picture-post-block{
+    width: 40%;
+  }
+  
+  .post-img{
+    width: 50px;
+  }
+  /*** Active States ***/
+.post:hover, .group:hover{
+  color: blue;
+}
+
+.msg:hover{
+  border: 0;
+  background-color: var(--Light-grayish-blue-2);
+}
+
+.notification-block:hover{
+  cursor:pointer;
+  background-color: rgba(128, 128, 128, 0.055);
+}
+
+a:hover{
+  color: blue;
+}
+/*** Active States ***/
+
+
+
+/*** New Notifications ***/
+.action-block > div > p > span:last-of-type{
+  color: var(--Light-grayish-blue-1);
+  margin: 0;
+}
+
+.action-block > div > p > span:last-of-type::after{
+  content:" ";
+  width: 0;
+  height: 0;
+  border: 5px solid red;
+  position: absolute;
+  bottom: 3px;
+  border-radius: 100%;
+}
+
+.read-ball{
+  display: none;
+}
+
+
+@media screen and (min-width: 1000px) {
+  body{
+    background-color: var(--Light-grayish-blue-1);
+  }
+
+  .notification-panel{
+    width: 70%;
+    background-color: white;
+    padding: 10px;
+    border-radius: 15px;
+  }
+
+  .action-block{
+    width: 89%;
+  }
+
+  .notification-heading{
+    font-size: 1rem;
+  }
+
+  .notification-heading > div:first-of-type{
+    width: 25%;
+  }
+
+  .img-block{
+    width: 10%;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1150px) {
+  .notification-panel{
+    width: 60%;
+  }
+
+  .action-block{
+    width: 85%;
+  }
+
+  .notification-heading > div:first-of-type{
+    width: 25%;
+  }
+
+  #NEW-NOTIFICATIONS{
+    margin-left: 10px;
+  }
+}
